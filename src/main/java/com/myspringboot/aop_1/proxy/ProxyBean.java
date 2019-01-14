@@ -1,7 +1,7 @@
-package com.myspringboot.aop.proxy;
+package com.myspringboot.aop_1.proxy;
 
-import com.myspringboot.aop.interceptor.Interceptor;
-import com.myspringboot.aop.invoke.Invocation;
+import com.myspringboot.aop_1.interceptor.Interceptor;
+import com.myspringboot.aop_1.invoke.Invocation;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

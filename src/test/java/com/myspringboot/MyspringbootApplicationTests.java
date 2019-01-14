@@ -3,10 +3,12 @@ package com.myspringboot;
 import com.myspringboot.annotation.ComponentDemo;
 import com.myspringboot.annotation.YmlProperties;
 import com.myspringboot.annotation.animal.Animal;
-import com.myspringboot.aop.HelloService;
-import com.myspringboot.aop.impl.HelloServiceImpl;
-import com.myspringboot.aop.interceptor.MyInterceptor;
-import com.myspringboot.aop.proxy.ProxyBean;
+import com.myspringboot.aop_1.HelloService;
+import com.myspringboot.aop_1.impl.HelloServiceImpl;
+import com.myspringboot.aop_1.interceptor.MyInterceptor;
+import com.myspringboot.aop_1.proxy.ProxyBean;
+import com.myspringboot.aop_2.service.MyService;
+import com.myspringboot.aop_3.Skill;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +21,11 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class MyspringbootApplicationTests {
     @Autowired
     ComponentDemo componentDemo;
+    @Autowired
+    private MyService myService;
+
     @Autowired(required = false)
+
     @Qualifier("dog")
     Animal animal;
 //    Animal dog;
@@ -63,5 +69,18 @@ public class MyspringbootApplicationTests {
         System.out.println("------------------------------------------------");
         proxy.sayHello(null);
     }
+
+    @Test
+    public void testAop2() {
+        myService.sayHello();
+    }
+
+    @Test
+    public void testAop3() {
+        Skill skill=(Skill) myService;
+        skill.skill();
+        ((Skill) myService).skill();
+    }
+
 }
 

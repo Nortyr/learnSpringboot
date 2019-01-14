@@ -13,7 +13,7 @@ import org.springframework.context.annotation.PropertySource;
  * 扫描这个路径下的xml
  */
 @SpringBootApplication
-@PropertySource(value = {"classpath:xxx.properties"},ignoreResourceNotFound = true)
+//@PropertySource(value = {"classpath:xxx.properties"},ignoreResourceNotFound = true)
 //@ImportResource(value = {"classpath:myxml.xml"})
 public class MyspringbootApplication {
 
