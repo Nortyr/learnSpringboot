@@ -22,8 +22,6 @@ public class MyAop {
      * 第一个切入点
      */
 
-//    @DeclareParents(value = "com.myspringboot.aop_2.service.impl.MyServiceImpl+",defaultImpl =SkillImpl.class)
-//    public Skill skill;
 
     @Pointcut("execution(* com.myspringboot.aop_2.service.impl.MyServiceImpl.*(..))")
     public void logPointCut() {
