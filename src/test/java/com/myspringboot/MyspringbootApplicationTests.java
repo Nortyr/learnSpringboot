@@ -75,12 +75,12 @@ public class MyspringbootApplicationTests {
         myService.sayHello();
     }
 
-    @Test
-    public void testAop3() {
-        Skill skill=(Skill) myService;
-        skill.skill();
-        ((Skill) myService).skill();
-    }
+//    @Test
+//    public void testAop3() {
+//        Skill skill=(Skill) myService;
+//        skill.skill();
+//        ((Skill) myService).skill();
+//    }
 
 }
 
