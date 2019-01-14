@@ -3,6 +3,10 @@ package com.myspringboot;
 import com.myspringboot.annotation.ComponentDemo;
 import com.myspringboot.annotation.YmlProperties;
 import com.myspringboot.annotation.animal.Animal;
+import com.myspringboot.aop.HelloService;
+import com.myspringboot.aop.impl.HelloServiceImpl;
+import com.myspringboot.aop.interceptor.MyInterceptor;
+import com.myspringboot.aop.proxy.ProxyBean;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,6 +53,15 @@ public class MyspringbootApplicationTests {
     @Test
     public void PropertiesDemo1(){
         System.out.println(ymlProperties1.getPort());
+    }
+
+    @Test
+    public void testAop1(){
+        HelloService helloService=new HelloServiceImpl();
+        HelloService proxy=(HelloService) ProxyBean.getProxyBean(helloService,new MyInterceptor());
+        proxy.sayHello("zhangsan");
+        System.out.println("------------------------------------------------");
+        proxy.sayHello(null);
     }
 }
 

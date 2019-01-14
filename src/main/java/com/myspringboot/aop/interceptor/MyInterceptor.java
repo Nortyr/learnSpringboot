@@ -1,8 +1,7 @@
 package com.myspringboot.aop.interceptor;
 
-import org.aopalliance.intercept.Invocation;
 
-import java.lang.reflect.InvocationTargetException;
+import com.myspringboot.aop.invoke.Invocation;
 
 /**
  * @Auther: 陈晖
@@ -28,8 +27,10 @@ public class MyInterceptor implements Interceptor {
         System.out.println("around before ......");
         Object obj=invocation.proceed();
         System.out.println("around after ......");
-        return null;
+        return obj;
+
     }
+
 
     @Override
     public void afterReturning() {
