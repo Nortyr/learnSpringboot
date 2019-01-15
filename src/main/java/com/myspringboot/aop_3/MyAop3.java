@@ -10,9 +10,9 @@ import org.aspectj.lang.annotation.DeclareParents;
  * @Descroption:
  */
 
-//@Aspect
-//public class MyAop3 {
+@Aspect
+public class MyAop3 {
 //    @DeclareParents(value = "com.myspringboot.aop_2.service.MyService+",defaultImpl =SkillImpl.class)
 //    public Skill skill;
-//
-//}
+
+}

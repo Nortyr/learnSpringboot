@@ -9,12 +9,17 @@ import com.myspringboot.aop_1.interceptor.MyInterceptor;
 import com.myspringboot.aop_1.proxy.ProxyBean;
 import com.myspringboot.aop_2.service.MyService;
 import com.myspringboot.aop_3.Skill;
+import com.myspringboot.transaction.PersonMapper;
+import com.myspringboot.transaction.TestTransaction;
+import com.myspringboot.transaction.po.Person;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -81,6 +86,12 @@ public class MyspringbootApplicationTests {
 //        Skill skill=(Skill)myService;
 //        skill.skill();
 //    }
+    @Autowired
+    TestTransaction testTransaction;
+    @Test
+    public void testT(){
+        testTransaction.Test1();
+    }
 
 }
 
