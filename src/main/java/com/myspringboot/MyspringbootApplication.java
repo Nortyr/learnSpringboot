@@ -1,10 +1,15 @@
 package com.myspringboot;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.annotation.ImportResource;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.serializer.RedisSerializer;
+
+import javax.annotation.PostConstruct;
 
 /**
  * @PropertySource(value = {"classpath:xxx.properties"},ignoreResourceNotFound = true)

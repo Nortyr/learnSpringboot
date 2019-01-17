@@ -18,10 +18,10 @@ import java.util.List;
 public class TestTransaction {
     @Autowired
     PersonMapper personMapper;
-    @Transactional(propagation = Propagation.REQUIRED)
+    @Transactional(propagation = Propagation.SUPPORTS)
     public void Test1(){
-        List<Person>list= personMapper.selectAll();
-//        Test2();
+//        List<Person>list= personMapper.selectAll();
+        Test2();
 
     }
 

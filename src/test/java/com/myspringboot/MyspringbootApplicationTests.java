@@ -9,6 +9,7 @@ import com.myspringboot.aop_1.interceptor.MyInterceptor;
 import com.myspringboot.aop_1.proxy.ProxyBean;
 import com.myspringboot.aop_2.service.MyService;
 import com.myspringboot.aop_3.Skill;
+import com.myspringboot.redis.RedisUtil;
 import com.myspringboot.transaction.PersonMapper;
 import com.myspringboot.transaction.TestTransaction;
 import com.myspringboot.transaction.po.Person;
@@ -92,6 +93,15 @@ public class MyspringbootApplicationTests {
     public void testT(){
         testTransaction.Test1();
     }
+
+    @Autowired
+    RedisUtil redisUtil;
+    @Test
+    public void testRedis(){
+        boolean b=redisUtil.set("校长","小王");
+        System.out.println(b);
+    }
+
 
 }
 
