@@ -3,6 +3,7 @@ package com.myspringboot;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.annotation.ImportResource;
 import org.springframework.context.annotation.PropertySource;
@@ -22,6 +23,8 @@ import javax.annotation.PostConstruct;
 //@EnableAspectJAutoProxy
 //@PropertySource(value = {"classpath:xxx.properties"},ignoreResourceNotFound = true)
 //@ImportResource(value = {"classpath:myxml.xml"})
+//使用缓存管理器
+@EnableCaching
 public class MyspringbootApplication {
 
     public static void main(String[] args) {
