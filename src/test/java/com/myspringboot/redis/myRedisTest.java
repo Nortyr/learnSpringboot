@@ -25,7 +25,42 @@ public class myRedisTest {
     RedisUtil redisUtil;
     @Test
     public void testRedis(){
-        boolean b=redisUtil.set("校长","小王");
+        boolean b=redisUtil.set("校长2","小王");
         System.out.println(b);
+    }
+    @Test
+    public void testGet(){
+        Object obj=redisUtil.get("校长1");
+        System.out.println(obj);
+    }
+    @Test
+    public void testSet1(){
+        boolean b=redisUtil.set1("aaa","bbbb");
+        System.out.println(b);
+    }
+    @Test
+    public void testSet2(){
+        boolean b=redisUtil.set2();
+        System.out.println(b);
+    }
+    @Test
+    public void testGet2(){
+        redisUtil.get2();
+    }
+    @Test
+    public void testSet3(){
+        redisUtil.set3();
+    }
+    @Test
+    public void testSet4(){
+        redisUtil.set4();
+    }
+    @Test
+    public void testSet5(){
+        redisUtil.set5();
+    }
+    @Test
+    public void testSet6(){
+        redisUtil.set6();
     }
 }
