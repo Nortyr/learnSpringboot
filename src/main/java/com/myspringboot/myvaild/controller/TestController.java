@@ -16,11 +16,11 @@ import javax.validation.Valid;
 @RestController
 public class TestController {
 
-    @PostMapping
-    //@Valid表示启动验证器
-    public Integer TestVaild(@Valid MyPo myPo){
-        return 1;
-    }
+//    @PostMapping
+//    //@Valid表示启动验证器
+//    public Integer TestVaild(@Valid MyPo myPo){
+//        return 1;
+//    }
 
 
 }
