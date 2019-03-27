@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.GetMapping;
     ////////////////////////
 @Controller
 public class WebSocketController {
-    @GetMapping("test1")
-    public String test1(){
-        return "test1";
-    }
+//    @GetMapping("test1")
+//    public String test1(){
+//        return "test1";
+//    }
 }
