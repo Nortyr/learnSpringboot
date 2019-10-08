@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<script th:src="@{/jquery-3.3.1.min.js}"></script>
+
+<body>
+    11111111111111111111111
+    <button onclick="a()">1111</button>
+
+    <script>
+        function a() {
+            $.ajax({
+                url:'/helloWorld',
+                data:{id:5},
+                dataType:'JSON',
+                type:'post',
+                success:function (a) {
+                    alert("ssss");
+                }
+            })
+        }
+
+
+    </script>
+</body>
+</html>
